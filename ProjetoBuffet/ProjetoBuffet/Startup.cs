@@ -10,7 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetoBuffet.Data;
+using ProjetoBuffet.Models.Acesso;
 using ProjetoBuffet.Models.Buffet.Cliente;
+using Usuario = ProjetoBuffet.Views.Home.Usuario;
 
 namespace ProjetoBuffet
 {
@@ -32,6 +34,18 @@ namespace ProjetoBuffet
                 options.UseMySql(Configuration.GetConnectionString("BuffetDb"))
                 );//aula 9
 
+            //configurar o controle de acesso dos usuarios
+            services.AddIdentity<Usuario, Papel>(options =>
+                {
+                    options.User.RequireUniqueEmail = true;
+                    options.Password.RequiredLength = 8;
+                }).AddEntityFrameworkStores<DatabaseContext>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Acesso/login";
+            });
+            
             services.AddTransient<ClienteService>();
 
         }
@@ -55,6 +69,7 @@ namespace ProjetoBuffet
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
