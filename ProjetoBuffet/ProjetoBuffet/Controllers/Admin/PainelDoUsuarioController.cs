@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Buffet.Models;
-using Buffet.ViewModels.Home;
+// using Buffet.Models;
+// using Buffet.ViewModels.Home;
 
-namespace Buffet.Controllers.Admin
+namespace ProjetoBuffet.Controllers.Admin
 {
     public class PainelDoUsuarioController : Controller
     {

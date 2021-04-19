@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Buffet.Models.Buffet.Cliente;
-using Microsoft.AspNetCore.Mvc;
 using ProjetoBuffet.Models.Buffet.Cliente;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace ProjetoBuffet.Controllers
 {
@@ -19,7 +19,7 @@ namespace ProjetoBuffet.Controllers
         public IActionResult Login()
         {
 
-            var clientes = _clienteService.ObterClientes();
+            /*var clientes = _clienteService.ObterClientes();
 
             foreach (var cliente in clientes)
             {
@@ -27,7 +27,7 @@ namespace ProjetoBuffet.Controllers
                 Console.WriteLine(cliente.Id);
                 Console.Write(" :: " + cliente.Nome);
                 Console.Write(" :: " + cliente.Email);
-            }
+            }*/
             
             return View();
         }
@@ -37,9 +37,24 @@ namespace ProjetoBuffet.Controllers
             return View();
         }
         
-        public IActionResult Cadastrar()
+        public IActionResult CriarConta()
         {
             return View();
         }
+        
+        public IActionResult PoliticaDePrivacidade()
+        {
+            return View();
+        }
+        
+        
+        /*
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
+        }
+        */
+        
     }
 }

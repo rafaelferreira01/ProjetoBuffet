@@ -6,9 +6,6 @@
 
     <ItemGroup>
       <Compile Remove="Models\Buffet\Clente.cs" />
-      <Compile Remove="Controllers\AcessoController.cs" />
-      <Compile Remove="Controllers\AjudaController.cs" />
-      <Compile Remove="Controllers\InformacoesLegaisController.cs" />
     </ItemGroup>
 
     <ItemGroup>

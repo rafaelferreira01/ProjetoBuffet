@@ -23,11 +23,13 @@
         </div>
         <div class="clearfix">
             @* <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label> *@
-            <a asp-controller="Acesso" asp-action="RecuperarConta" class="pull-right">Recuperar conta</a>
+            <a asp-controller="Home" asp-action="RecuperarConta" class="pull-right">Recuperar conta</a>
         </div>
     </form>
-    <p class="text-center"><a asp-controller="Login" asp-action="CriarConta" class="pull-right">Criar conta</a></p>
+    <p class="text-center"><a asp-controller="Home" asp-action="CriarConta" class="pull-right">Criar conta</a></p>
 </div>
+
+@*
 <ul>
     @foreach (var cliente in @Model.Clientes)
     {
@@ -35,6 +37,8 @@
     }
     
 </ul>
+*@
+
 
 @* TELA DE LOGIN JUNTO COM REGISTRO (Nao esquecer de descomentar o css) *@
 @* <div class="row"> *@

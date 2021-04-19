@@ -75,6 +75,10 @@ namespace ProjetoBuffet.Models.Buffet.Cliente
                 .Single(c => c.Id.ToString()
                     .Equals("08d8f887-cd09-421d-8ee1-a0f9f0d36e57")
                 );
+          
+            
+            
+            
             
             if (cliente != null)
             {
@@ -84,8 +88,13 @@ namespace ProjetoBuffet.Models.Buffet.Cliente
                 Console.Write(" :: " + cliente.Eventos.Count);
             }
             
-            //return cliente;
-            //return _databaseContext.Clientes.ToList();
+            
+            
+            
+            
+            
+            // return cliente;
+            return _databaseContext.Clientes.ToList();
         }
     }
 }
