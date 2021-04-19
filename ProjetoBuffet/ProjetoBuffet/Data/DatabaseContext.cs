@@ -12,8 +12,7 @@ namespace ProjetoBuffet.Data
                 public DbSet<ClienteEntity> Clientes { get; set; }
                 public DbSet<EventoEntity> Eventos { get; set; }
                 
-                public DatabaseContext(DbContextOptions<DatabaseContext> options)
-                :base(options)
+                public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
                 {
                 }
         }

@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,7 +30,7 @@ namespace ProjetoBuffet
                 );//aula 9
 
             //configurar o controle de acesso dos usuarios (esse bloco esta dando erro com migrations)
-            services.AddIdentity<Usuario, Papel>(options =>
+            /*services.AddIdentity<Usuario, Papel>(options =>
                 {
                     options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;
@@ -44,7 +39,7 @@ namespace ProjetoBuffet
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Acesso/Login";
-            });
+            });*/
             
             services.AddTransient<ClienteService>();
 
@@ -76,7 +71,7 @@ namespace ProjetoBuffet
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    // pattern: "{controller=Home}/{action=Index}/{id?}");
+                    // pattern: "{controller=Home}/{action=Login}/{id?}");
                     pattern: "{controller=Acesso}/{action=Login}/{id?}");
             });
         }

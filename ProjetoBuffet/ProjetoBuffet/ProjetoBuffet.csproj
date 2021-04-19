@@ -6,10 +6,12 @@
 
     <ItemGroup>
       <Compile Remove="Models\Buffet\Clente.cs" />
+      <Compile Remove="Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Views\Home\Login.html" />
+      <None Remove="Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -17,7 +19,7 @@
       <Content Remove="Views\Shared\_Layout.cshtml" />
       <Content Remove="Views\Home\Privacy.cshtml" />
       <Content Remove="Views\Home\Termos.cshtml" />
-      <Content Remove="Views\Home\Login.cshtml" />
+      <Content Remove="Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +30,10 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Migrations\**" />
     </ItemGroup>
 
 </Project>
