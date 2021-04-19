@@ -10,14 +10,14 @@ namespace ProjetoBuffet.Controllers
         public InformacoesLegaisController(){
         }
 
-        public IActionResult TermosDeUso()
+        /*public IActionResult TermosDeUso()
         {   
             return View();
-        }
+        }*/
         
-        public IActionResult PoliticaDePrivacidade()
+        /*public IActionResult PoliticaDePrivacidade()
         {   
             return View();
-        }
+        }*/
     }
 }

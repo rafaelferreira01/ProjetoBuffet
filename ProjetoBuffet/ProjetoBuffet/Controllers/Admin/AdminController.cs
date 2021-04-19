@@ -11,9 +11,9 @@ namespace Buffet.Controllers.Admin
         {
         }
 
-        public IActionResult Supervisao()
+        /*public IActionResult Supervisao()
         {
             return View();
-        }
+        }*/
     }
 }

@@ -84,15 +84,15 @@ namespace ProjetoBuffet.Controllers
 
         
 
-       public IActionResult Login()
+       /*public IActionResult Login()
         {
             return View();
-        }
+        }*/
         
-        public IActionResult Cadastro()
+        /*public IActionResult Cadastro()
         {
             return View();
-        }
+        }*/
         
         public IActionResult CriarConta()
         {

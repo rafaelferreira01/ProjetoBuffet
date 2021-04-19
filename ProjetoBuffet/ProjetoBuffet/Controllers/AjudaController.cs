@@ -10,9 +10,9 @@ namespace ProjetoBuffet.Controllers
         public AjudaController(){
         }
 
-        public IActionResult Index()
+        /*public IActionResult Index()
         {   
             return View();
-        }
+        }*/
     }
 }

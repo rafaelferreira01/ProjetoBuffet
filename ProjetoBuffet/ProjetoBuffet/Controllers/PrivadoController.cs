@@ -35,10 +35,10 @@ namespace ProjetoBuffet.Controllers
             return View();
         }
         
-        public IActionResult Logout()
+        /*public IActionResult Logout()
         {
             return View();
-        }
+        }*/
         
         public IActionResult Secao1()
         {

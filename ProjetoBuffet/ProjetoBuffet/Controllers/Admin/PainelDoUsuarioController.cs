@@ -13,9 +13,9 @@ namespace ProjetoBuffet.Controllers.Admin
         {
         }
 
-        public IActionResult Index()
+        /*public IActionResult Index()
         {
             return View();
-        }
+        }*/
     }
 }
