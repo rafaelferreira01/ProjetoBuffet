@@ -14,7 +14,6 @@ namespace ProjetoBuffet.Models.Buffet.Cliente
         ){
             _databaseContext = databaseContext;
         }
-
         public List<ClienteEntity> ObterClientes()
         {
             return _databaseContext.Clientes.ToList();
