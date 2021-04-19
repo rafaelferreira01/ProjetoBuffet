@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ProjetoBuffet.Data;
+using ProjetoBuffet.Models.Buffet.Cliente;
 
 namespace ProjetoBuffet
 {
@@ -24,6 +27,13 @@ namespace ProjetoBuffet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<DatabaseContext>(options =>
+                options.UseMySql(Configuration.GetConnectionString("BuffetDb"))
+                );//aula 9
+
+            services.AddTransient<ClienteService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

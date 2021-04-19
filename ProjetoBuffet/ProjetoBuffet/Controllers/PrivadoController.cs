@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjetoBuffet.Models;
 using ProjetoBuffet.Models.Buffet.Cliente;
-using ProjetoBuffet.ViewModels.Home;
+// using ProjetoBuffet.ViewModels.Home;
 
 namespace ProjetoBuffet.Controllers
 {

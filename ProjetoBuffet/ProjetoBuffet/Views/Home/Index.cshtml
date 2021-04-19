@@ -28,7 +28,13 @@
     </form>
     <p class="text-center"><a asp-controller="Home" asp-action="CriarConta" class="pull-right">Criar conta</a></p>
 </div>
-
+<ul>
+    @foreach (var cliente in @Model.Clientes)
+    {
+        <li>O cliente @cliente.Nome possui o ID: @cliente.Id</li>
+    }
+    
+</ul>
 
 @* TELA DE LOGIN JUNTO COM REGISTRO (Nao esquecer de descomentar o css) *@
 @* <div class="row"> *@
