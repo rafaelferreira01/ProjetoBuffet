@@ -62,6 +62,7 @@ namespace ProjetoBuffet
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                    // pattern: "{controller=Acesso}/{action=Login}/{id?}");
             });
         }
     }
