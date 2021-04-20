@@ -31,7 +31,8 @@ namespace ProjetoBuffet
 
             //configurar o controle de acesso dos usuarios (esse bloco esta dando erro com migrations)
             services.AddIdentity<Usuario, Papel>(options =>
-                {
+            {
+                options.Password.RequireUppercase = true;
                     options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;
                 }).AddEntityFrameworkStores<DatabaseContext>();

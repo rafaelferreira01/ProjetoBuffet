@@ -27,7 +27,7 @@ namespace ProjetoBuffet.Controllers
             _clienteService = clienteService;
         }
 
-        public IActionResult Login()
+        public IActionResult Index()
         {
             // 1ª forma de eviar dados para a view
             ViewBag.informacaoQualquer = "Imformação Qualquer";

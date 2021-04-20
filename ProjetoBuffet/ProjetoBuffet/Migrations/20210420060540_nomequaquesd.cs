@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProjetoBuffet.Migrations
 {
-    public partial class nomequaquer : Migration
+    public partial class nomequaquesd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

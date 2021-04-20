@@ -47,6 +47,7 @@ namespace ProjetoBuffet.Controllers
             var viewmodel = new CadastrarViewModel();
 
             viewmodel.Mensagem = (string) TempData["msg-cadastro"];
+            viewmodel.ErrosCadastro = (string[]) TempData["msg-cadastro"];
             
             return View(viewmodel);
         }
@@ -58,7 +59,7 @@ namespace ProjetoBuffet.Controllers
             /*var redirectUrl = "/Acesso/CriarConta";*/
 
             var email = request.Email;
-            var senha = request.Email;
+            var senha = request.Senha;
 
             if (email == null)
             {
@@ -74,9 +75,17 @@ namespace ProjetoBuffet.Controllers
                 return RedirectToAction("Login");
                 /*return Redirect("/Acesso/Login");*/
             }
-            catch (Exception exception)
+            catch (CadastrarUsuarioException exception)
             {
-                TempData["msg-cadastro"] = exception.Message;
+                var listaErros = new List<string>();
+                
+                foreach (var identityError in exception.Erros)
+                {
+                    listaErros.Add(identityError.Description);
+                }
+                
+                
+                TempData["erros-cadastro"] = listaErros;
                 return RedirectToAction("CriarConta");
             }
             

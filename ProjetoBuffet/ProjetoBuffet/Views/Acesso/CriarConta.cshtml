@@ -20,12 +20,22 @@
                 <p>@Model.Mensagem</p>
             }
         
+        @if (Model.ErrosCadastro != null)
+            {
+                <ul>
+                    @foreach (var erro in Model.ErrosCadastro)
+                    {
+                        <li>@erro</li>
+                    }
+                </ul>
+            }
+        
         
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email" required="required">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Senha" required="required">
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="required">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
