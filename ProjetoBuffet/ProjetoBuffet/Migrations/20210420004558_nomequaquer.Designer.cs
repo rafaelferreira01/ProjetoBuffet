@@ -9,14 +9,14 @@ using ProjetoBuffet.Data;
 namespace ProjetoBuffet.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210419204952_vaiTomarNoCu")]
-    partial class vaiTomarNoCu
+    [Migration("20210420004558_nomequaquer")]
+    partial class nomequaquer
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.14")
+                .HasAnnotation("ProductVersion", "3.1.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

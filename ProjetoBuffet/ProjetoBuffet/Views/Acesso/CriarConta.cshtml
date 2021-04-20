@@ -1,4 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Criar de Conta";
+﻿@model ProjetoBuffet.ViewModels.Acesso.CadastrarViewModel;
+
+@{
+    ViewData["Title"] = "Criar Conta";
 }
-<h1>@ViewData["Title"]</h1>
+
+<img src="logo.png" alt="Logo" class="center">
+@* TELA DE LOGIN SEPARADA (Nao esquecer de descomentar o css) *@
+<div class="login-form">
+    
+    
+    @* <form action="/examples/actions/confirmation.php" method="post"> *@
+    @* <form asp-controller="Privado" asp-action="Index" method="post"> *@
+    <form method="post" action="/Acesso/CriarConta" >
+    
+        <h2 class="text-center">Cadastro</h2>
+        
+        @if (Model.Mensagem != null)
+            {
+                <p>@Model.Mensagem</p>
+            }
+        
+        
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Senha" required="required">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </div>
+        @* <div class="clearfix"> *@
+        @*     $1$ <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label> #1# *@
+        @*     <a asp-controller="Acesso" asp-action="RecuperarConta" class="pull-right">Recuperar conta</a> *@
+        @* </div> *@
+    </form>
+    @* <p class="text-center"><a asp-controller="Acesso" asp-action="CriarConta" class="pull-right">Criar conta</a></p> *@
+</div>

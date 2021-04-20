@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using ProjetoBuffet.Data;
 using ProjetoBuffet.Models.Acesso;
 using ProjetoBuffet.Models.Buffet.Cliente;
-using Usuario = ProjetoBuffet.Views.Home.Usuario;
+
 
 namespace ProjetoBuffet
 {
@@ -30,7 +30,7 @@ namespace ProjetoBuffet
                 );//aula 9
 
             //configurar o controle de acesso dos usuarios (esse bloco esta dando erro com migrations)
-            /*services.AddIdentity<Usuario, Papel>(options =>
+            services.AddIdentity<Usuario, Papel>(options =>
                 {
                     options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;
@@ -39,8 +39,9 @@ namespace ProjetoBuffet
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Acesso/Login";
-            });*/
+            });
             
+            services.AddTransient<AcessoService>();
             services.AddTransient<ClienteService>();
 
         }

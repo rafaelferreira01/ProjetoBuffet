@@ -110,7 +110,6 @@ D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoB
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Pomelo.JsonObject.dll
-D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Privado\Logoutdddd.cshtml.g.cs
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Acesso\CadastroDeConta.cshtml.g.cs
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Acesso\CriarConta.cshtml.g.cs
@@ -118,4 +117,4 @@ D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoB
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Acesso\PoliticaDePrivacidade.cshtml.g.cs
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Acesso\RecuperarConta.cshtml.g.cs
 D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+D:\Rafael\Vianna\3P\PWA\Trabalho\Buffet\ProjetoBuffet.git\ProjetoBuffet\ProjetoBuffet\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
