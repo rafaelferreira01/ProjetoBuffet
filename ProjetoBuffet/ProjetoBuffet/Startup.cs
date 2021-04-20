@@ -29,11 +29,10 @@ namespace ProjetoBuffet
                 options.UseMySql(Configuration.GetConnectionString("BuffetDb"))
                 );//aula 9
 
-            //configurar o controle de acesso dos usuarios (esse bloco esta dando erro com migrations)
+            //configurar o controle de acesso dos usuarios
             services.AddIdentity<Usuario, Papel>(options =>
             {
-                options.Password.RequireUppercase = true;
-                    options.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;
                 }).AddEntityFrameworkStores<DatabaseContext>();
             

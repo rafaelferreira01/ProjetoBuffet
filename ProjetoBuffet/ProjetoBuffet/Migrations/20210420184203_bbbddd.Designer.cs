@@ -9,8 +9,8 @@ using ProjetoBuffet.Data;
 namespace ProjetoBuffet.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210420060540_nomequaquesd")]
-    partial class nomequaquesd
+    [Migration("20210420184203_bbbddd")]
+    partial class bbbddd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

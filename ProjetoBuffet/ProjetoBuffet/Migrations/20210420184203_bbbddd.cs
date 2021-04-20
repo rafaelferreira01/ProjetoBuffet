@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProjetoBuffet.Migrations
 {
-    public partial class nomequaquesd : Migration
+    public partial class bbbddd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
