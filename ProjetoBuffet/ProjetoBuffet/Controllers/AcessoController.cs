@@ -47,7 +47,7 @@ namespace ProjetoBuffet.Controllers
             var viewmodel = new CadastrarViewModel();
 
             viewmodel.Mensagem = (string) TempData["msg-cadastro"];
-            viewmodel.ErrosCadastro = (string[]) TempData["msg-cadastro"];
+            viewmodel.ErrosCadastro = (string[]) TempData["erros-cadastro"];
             
             return View(viewmodel);
         }
