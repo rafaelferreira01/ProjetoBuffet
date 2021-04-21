@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+
 using System.Threading.Tasks;
-using ProjetoBuffet.Models.Buffet.Cliente;
+
 using Microsoft.AspNetCore.Mvc;
 using ProjetoBuffet.Models.Acesso;
 using ProjetoBuffet.RequestModels;
@@ -33,10 +33,16 @@ namespace ProjetoBuffet.Controllers
         [HttpPost]
         public async Task<RedirectResult> Login(AcessoLoginRequestModels request)
         {
-            var redirectUrl = "/Acesso/Login";
+            /*var redirectUrl = "/Acesso/Login";*/
             var email = request.Email;
             var senha = request.Senha;
             
+            if (email == null)
+            {
+                TempData["msg-login"] = "Por favor informe o e-mail";
+                /*return Redirect(redirectUrl);*/
+                return Redirect(url:"/Acesso/Login");
+            }
             
             try
             {
@@ -50,33 +56,6 @@ namespace ProjetoBuffet.Controllers
                 TempData["msg-login"] = exception.Message;
                 return Redirect(url:"/Acesso/Login");
             }
-            
-
-            /*if (email == null)
-            {
-                TempData["msg-cadastro"] = "Por favor informe o e-mail";
-                /*return Redirect(redirectUrl);#1#
-                return RedirectToAction("CriarConta");
-            }*/
-            /*try
-            {
-                await _acessoService.AutenticarUsuario(email, senha);
-                TempData["msg-cadastro"] = "Cadastro realizado com sucesso.";
-                /*return RedirectToAction("Index","Privado");#1#
-                return Redirect("/Privado/Index");
-            }
-            catch (LoginUsuarioException exception)
-            {
-                var listaErros = new List<string>();
-                
-                foreach (var identityError in exception.Erros)
-                {
-                    listaErros.Add(identityError.Description);
-                }
-                TempData["erros-cadastro"] = listaErros;
-                /*return RedirectToAction("Index","Privado");#1#
-                return Redirect("/Privado/Index");
-            }*/
         }
         
         public IActionResult RecuperarConta()
@@ -110,6 +89,7 @@ namespace ProjetoBuffet.Controllers
                 /*return Redirect(redirectUrl);*/
                 return RedirectToAction("CriarConta");
             }
+            
 
             try
             {

@@ -21,7 +21,7 @@ namespace ProjetoBuffet.Models.Acesso
         {
             var resultado = await _signInManager.PasswordSignInAsync(username, senha, false, false);
             
-            if (!resultado.Succeeded)
+            if (!resultado.Succeeded || username == null)
             {
                 throw new Exception("Usuário ou senha inválidos.");
             }
