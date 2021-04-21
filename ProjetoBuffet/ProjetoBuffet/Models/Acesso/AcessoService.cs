@@ -41,8 +41,6 @@ namespace ProjetoBuffet.Models.Acesso
             {
                 throw new CadastrarUsuarioException(resultado.Errors);
             }
-            
-        }   
-        
+        }
     }
 }

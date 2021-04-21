@@ -1,4 +1,6 @@
 ﻿
+@model ProjetoBuffet.ViewModels.Acesso.LoginViewModel;
+
 @{
     ViewData["Title"] = "Pagina Inicial Externa";
 }
@@ -9,14 +11,24 @@
 <div class="login-form">
     
     @* <form action="/examples/actions/confirmation.php" method="post"> *@
-    <form asp-controller="Privado" asp-action="Index" method="post">
-    
+    @*<form id="login-form" method="POST" action="/Home/Login">*@
+    @*<form asp-controller="Privado" asp-action="Index" method="post">*@
+    <form asp-controller="Acesso" asp-action="Login" method="post">    
+
+        @* <form method="post" action="/Acesso/Login" > *@
+
         <h2 class="text-center">Log In</h2>
+
+        @if (Model.Mensagem != null)
+        {
+            <p>@Model.Mensagem</p>
+        }
+
         <div class="form-group">
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required="required">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="required">
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Entrar</button>

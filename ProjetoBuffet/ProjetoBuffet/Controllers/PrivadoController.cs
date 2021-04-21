@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjetoBuffet.Models;
@@ -11,6 +12,7 @@ using ProjetoBuffet.Models.Buffet.Cliente;
 
 namespace ProjetoBuffet.Controllers
 {
+    [Authorize]
     public class PrivadoController : Controller
     {
         private readonly ILogger<PrivadoController> _logger;

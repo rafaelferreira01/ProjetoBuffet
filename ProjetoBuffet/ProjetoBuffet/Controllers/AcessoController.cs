@@ -20,20 +20,63 @@ namespace ProjetoBuffet.Controllers
             _acessoService = acessoService;
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
-
-            /*var clientes = _clienteService.ObterClientes();
-
-            foreach (var cliente in clientes)
-            {
-                Console.WriteLine("----");
-                Console.WriteLine(cliente.Id);
-                Console.Write(" :: " + cliente.Nome);
-                Console.Write(" :: " + cliente.Email);
-            }*/
+            var viewmodel = new LoginViewModel();
             
-            return View();
+            viewmodel.Mensagem = (string) TempData["msg-login"];
+            
+            return View(viewmodel);
+        }
+        
+        [HttpPost]
+        public async Task<RedirectResult> Login(AcessoLoginRequestModels request)
+        {
+            var redirectUrl = "/Acesso/Login";
+            var email = request.Email;
+            var senha = request.Senha;
+            
+            
+            try
+            {
+                await _acessoService.AutenticarUsuario(email, senha);
+                /*TempData["msg-login"] = "Login realizado com sucesso!";*/
+                return Redirect(url:"/Privado/Index");
+                
+            }
+            catch (Exception exception)
+            {
+                TempData["msg-login"] = exception.Message;
+                return Redirect(url:"/Acesso/Login");
+            }
+            
+
+            /*if (email == null)
+            {
+                TempData["msg-cadastro"] = "Por favor informe o e-mail";
+                /*return Redirect(redirectUrl);#1#
+                return RedirectToAction("CriarConta");
+            }*/
+            /*try
+            {
+                await _acessoService.AutenticarUsuario(email, senha);
+                TempData["msg-cadastro"] = "Cadastro realizado com sucesso.";
+                /*return RedirectToAction("Index","Privado");#1#
+                return Redirect("/Privado/Index");
+            }
+            catch (LoginUsuarioException exception)
+            {
+                var listaErros = new List<string>();
+                
+                foreach (var identityError in exception.Erros)
+                {
+                    listaErros.Add(identityError.Description);
+                }
+                TempData["erros-cadastro"] = listaErros;
+                /*return RedirectToAction("Index","Privado");#1#
+                return Redirect("/Privado/Index");
+            }*/
         }
         
         public IActionResult RecuperarConta()
